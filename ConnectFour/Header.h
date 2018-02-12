@@ -97,6 +97,16 @@ void printbrd(std::vector<std::vector<std::string> > board)
 			 }
 		 }
 	 }
+	 for (int x = 5; x > 2; x--)
+	 {
+		 for (int y = 0; y < 4; y++)
+		 {
+			 if (board[x][y] == board[x - 1][y + 1] && board[x][y] == board[x - 2][y + 2] && board[x][y] == board[x - 3][y + 3] && board[x][y] != "[ ] ")
+			 {
+				 wincheck = true;
+			 }
+		 }
+	 }
 
 	 if (wincheck == true)
 	 {
